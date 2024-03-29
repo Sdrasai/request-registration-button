@@ -50,14 +50,14 @@ exports.registerUser = async (req, res) => {
       appointmentDate,
     });
     await newUser.save();
-    // await sendEmailNotification({
-    //   phoneNumber,
-    //   nameAndLastName,
-    //   email,
-    //   address,
-    //   description,
-    //   appointmentDate
-    // });
+    await sendEmailNotification({
+      phoneNumber,
+      nameAndLastName,
+      email,
+      address,
+      description,
+      appointmentDate,
+    });
     res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
     console.error("Error registering user:", error);

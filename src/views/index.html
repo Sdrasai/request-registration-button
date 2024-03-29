@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Page</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="css/persian.datepicker.css" />
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/persian-date/dist/persian-date.js/persian.date.js"></script>
-    <script src="node_modules/persian-date/dist/persian-date.js/persian.datepicker.js"></script>
-    <!-- <link
+    <link rel="stylesheet" href="persian-datepicker.css" />
+    <script src="jquery.js"></script>
+    <script src="persian-datepicker.js"></script>
+    <script src="persian-date.js"></script>
+    <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
@@ -20,47 +20,57 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/persian-datepicker/dist/css/persian-datepicker.min.css"
-    /> -->
+    />
   </head>
   <body>
-    <div class="container">
-      <h1>لطفا مشخصات خود را وارد کنید</h1>
+    <div class="container text-right">
+      <h1 class="mt-5">لطفا مشخصات خود را وارد کنید</h1>
       <form action="/register" method="post">
         <div class="form-group">
-          <label for="nameAndLastName">نام و نام خانوادگی</label><br />
+          <label for="nameAndLastName"
+            >نام و نام خانوادگی<span class="required"></span
+          ></label>
           <input
             type="text"
             id="nameAndLastName"
             name="nameAndLastName"
+            class="form-control"
             required
           />
         </div>
         <div class="form-group">
-          <label for="phoneNumber">شماره تماس</label><br />
+          <label for="phoneNumber"
+            >شماره تماس<span class="required"></span
+          ></label>
           <input
             type="text"
             id="phoneNumber"
             name="phoneNumber"
+            class="form-control"
             pattern="(?:\+98|0)?9\d{9}"
             title="Iranian phone number format"
             required
           />
         </div>
         <div class="form-group">
-          <label for="email">ایمیل</label><br />
-          <input type="email" id="email" name="email" />
+          <label for="email">ایمیل</label>
+          <input type="email" id="email" name="email" class="form-control" />
         </div>
         <div class="form-group">
-          <label for="address">آدرس</label><br />
-          <input type="text" id="address" name="address" />
+          <label for="address">آدرس</label>
+          <input type="text" id="address" name="address" class="form-control" />
         </div>
         <div class="form-group">
-          <label for="description">توضیحات کوتاه در مورد مشکل</label><br />
-          <textarea id="description" name="description"></textarea>
+          <label for="description">توضیحات کوتاه در مورد مشکل</label>
+          <textarea
+            id="description"
+            name="description"
+            class="form-control"
+          ></textarea>
         </div>
         <div class="form-group">
-          <label for="appointmentDate">انتخاب روز مشخص</label><br />
-          <input
+          <label for="appointmentDate">انتخاب روز مشخص</label>
+          <!-- <input
             type="text"
             id="appointmentDate"
             name="appointmentDate"
@@ -69,6 +79,16 @@
             data-position="bottom right"
             data-multiple-dates="3"
             placeholder="تاریخ مورد نظر را وارد کنید"
+          /> -->
+          <input
+            type="text"
+            id="appointmentDate"
+            name="appointmentDate"
+            class="initial-value-example"
+            data-language="fa"
+            data-position="bottom right"
+            data-multiple-dates="3"
+            placeholder="تاریخ مورد نظر خود را وارد کنید"
           />
         </div>
         <button type="submit">ثبت درخواست</button>
