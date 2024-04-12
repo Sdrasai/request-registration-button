@@ -1,0 +1,69 @@
+/* Style for modal content */
+.modal-content {
+        background-color: #f8f9fa;
+        /* Change as needed */
+        border: none;
+        /* Remove border */
+}
+
+/* Style for modal header */
+.modal-header {
+        background-color: #007bff;
+        /* Change as needed */
+        color: white;
+        /* Text color */
+        border-bottom: none;
+        /* Remove border */
+}
+
+/* Style for modal body */
+.modal-body {
+        padding: 20px;
+        /* Add padding */
+}
+
+/* Style for form labels */
+label {
+        font-weight: bold;
+        /* Make labels bold */
+}
+
+/* Style for form inputs */
+.form-control {
+        border: 1px solid #ced4da;
+        /* Add border */
+        border-radius: .25rem;
+        /* Add border radius */
+        padding: .375rem .75rem;
+        /* Add padding */
+}
+
+/* Style for form buttons */
+.btn-primary,
+.btn-secondary {
+        border-radius: .25rem;
+        /* Add border radius */
+        padding: .375rem .75rem;
+        /* Add padding */
+}
+
+/* Adjust modal footer */
+.modal-footer {
+        justify-content: flex-start;
+        /* Align buttons to the left */
+}
+
+/* Adjust modal size for smaller screens */
+@media (max-width: 576px) {
+        .modal-dialog {
+                max-width: 90%;
+                /* Adjust max-width for smaller screens */
+        }
+}
+
+.required::after {
+        content: "*";
+        color: red;
+        font-weight: bold;
+        /* Make the star bold for emphasis */
+}
